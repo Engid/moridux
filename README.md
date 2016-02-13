@@ -1,5 +1,5 @@
 # moridux
-<a href="http://redux.js.org/index.html">Redux</a> implemented with <a href="http://swannodette.github.io/mori/"Mori's</a> persistent immutable data structures.
+<a href="http://redux.js.org/index.html">Redux</a> implemented with <a href="http://swannodette.github.io/mori/">Mori's</a> persistent immutable data structures.
 
 This is meant as a way for me to learn by doing. 
 
