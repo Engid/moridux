@@ -303,8 +303,13 @@ var AddTodo = function AddTodo(_ref4) {
 AddTodo = ReactRedux.connect()(AddTodo);
 
 //from index.js --------------------------------------//
-// Provider is from ReactRedux
-var store = Redux.createStore(todoApp);
+
+var finalCreateStore = Redux.compose(window.devToolsExtension ? window.devToolsExtension() : function (f) {
+	return f;
+})(Redux.createStore);
+
+var store = finalCreateStore(todoApp);
+
 var Provider = ReactRedux.Provider;
 
 ReactDOM.render(React.createElement(
