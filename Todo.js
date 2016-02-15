@@ -265,8 +265,13 @@ let AddTodo = ({ dispatch }) => {
 AddTodo = ReactRedux.connect()(AddTodo);
 
 //from index.js --------------------------------------//
-// Provider is from ReactRedux
-let store = Redux.createStore(todoApp);
+
+const finalCreateStore = Redux.compose(
+	 window.devToolsExtension ? window.devToolsExtension() : f => f
+)(Redux.createStore);
+
+let store = finalCreateStore(todoApp); 
+
 let Provider = ReactRedux.Provider;
 
 ReactDOM.render(
